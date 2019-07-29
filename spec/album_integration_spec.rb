@@ -1,5 +1,6 @@
 require('capybara/rspec')
 require('./app')
+require 'spec_helper'
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
@@ -23,3 +24,4 @@ describe('create a song path', {:type => :feature}) do
     expect(page).to have_content('All You Need Is Love')
   end
 end
+# 
