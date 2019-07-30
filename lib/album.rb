@@ -63,6 +63,10 @@ class Album
   def update(name)
     @name = name
     DB.exec("UPDATE albums SET name = '#{@name}' WHERE id = #{@id};")
+    # SELECT column_name(s)
+    # FROM table_name
+    # WHERE EXISTS
+    # (SELECT column_name FROM table_name WHERE condition);
   end
 
   def delete
